@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div id="background">
+      <video muted="" autoplay="" loop="" playsinline="">
+        <source src="/assets/NE-Background.mp4" type="video/mp4">
+
+
+      </video>
+    <div id="main">
+      <div id="name-container">
+
+        <div id="name">
+          nicholas ericksen
+        </div>
+        <p id="header-links">
+        <a href="/directory.html">&#x21B5;</a>
+        </p>
+
+      </div>
+    </div>
+    </div>
+
+  </body>
+
+<style>
+
+#header-links a {
+  text-decoration: none;
+  color: azure;
+  transition: 0.2s;
+}
+#header-links a:hover {
+  font-size: 2em;
+}
+
+#background {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+#background video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+html, body {
+  height: 100%;
+  width: 100;
+}
+body {
+  margin: 0;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); 
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+  /*
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+*/
+
+#main {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+#name-container {
+  width: auto;
+}
+#name {
+  padding: 5px;
+  width: 300px;
+  height: 30px;
+  margin: 10px;
+  line-height: 20px;
+  font-size: 2em;
+  text-align: center;
+  font-family: monospace;
+  font-weight: 700;
+  color: azure;
+}
+
+#header-links {
+  font-family: sans-serif;
+  text-align:center;
+  margin:0;
+  color: azure;
+  padding: 0;
+  font-size: 30px;
+}
+
+</style>
+</html>
