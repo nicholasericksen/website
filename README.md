@@ -39,7 +39,9 @@ To create a new page simply copy the `template.html` file and add the link into 
 
 
 ## TODO
+```
 [] Add ability to create new webpage and add to directory with `build.py` script
 [] Convert `build.py` into CLI tool.
 [] Create simple mobile app to writing markdown blog posts and publishing them to Github.
 [] Add dark mode support.
+```
