@@ -34,3 +34,12 @@ To build the article first run `python3 -m venv venv` in the root directory.
 Then enable it with `source venv/bin/activate`.
 In order to build and publish an article run `python3 build.py`.
 You will be prompted to select which article to publish.
+
+To create a new page simply copy the `template.html` file and add the link into the `directory.html` page.
+
+
+## TODO
+[] Add ability to create new webpage and add to directory with `build.py` script
+[] Convert `build.py` into CLI tool.
+[] Create simple mobile app to writing markdown blog posts and publishing them to Github.
+[] Add dark mode support.
