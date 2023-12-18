@@ -20,7 +20,7 @@ def publish(article):
   
   soup = BeautifulSoup(template, features="html.parser")
   print(f"Publishing: {article}")  
-  with open(f"public/{article}.html", "w") as f:
+  with open(f"public/blog/{article}.html", "w") as f:
     f.write(soup.prettify())
   os.system("git status")
   prompt = """
@@ -55,7 +55,7 @@ def prompt_publish():
 def generate_index():
 
   f_names = []
-  for (dirpath, dirnames, filenames) in walk("public"):
+  for (dirpath, dirnames, filenames) in walk("public/blog"):
     f_names.extend(filenames)
     break
 
@@ -67,7 +67,7 @@ def generate_index():
   html = "<ol>"
 
   for name in f_names:
-    html += f"<li><a href='/public/{name}'>{name.replace('-',' ').replace('.html', '')}</a></li>"
+    html += f"<li><a href='/public/blog/{name}'>{name.replace('-',' ').replace('.html', '')}</a></li>"
 
   html += "</ol>"
   
@@ -75,7 +75,7 @@ def generate_index():
   
   soup = BeautifulSoup(template, features="html.parser")
   #print(f"Publishing: {article}")  
-  with open(f"blog.html", "w") as f:
+  with open(f"public/blog.html", "w") as f:
     f.write(soup.prettify())
   
 

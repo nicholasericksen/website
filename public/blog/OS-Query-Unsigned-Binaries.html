@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <link href="/public/sheep_favicon.png" rel="icon" type="image/png"/>
+  <title>
+   nicholasericksen
+  </title>
+ </head>
+ <body>
+  <h1>
+   Detecting Unsigned Binaries with OSQuery
+  </h1>
+  <p>
+   Some malware may like to try and hide itself by looking like an Apple program.
+Based on the last query of checking launchd for
+   <code>
+    com.apple
+   </code>
+   may not be enough.
+So it seems reasonable to try and check the binaries signature for more assurance.
+Unsigned binaries can be a big hint that something is wrong on your machine.
+Leveraging OS Query should make our lives easier to try and find unsigned binaries.
+  </p>
+  <pre><code>select * FROM signature s JOIN launchd d ON d.program_arguments = s.path WHERE signed=0 AND d.run_at_load=1;
+</code></pre>
+  <p>
+   Thankfully there are no results returned from this query on my machine!
+  </p>
+  <h3>
+   REF
+  </h3>
+  <p>
+   I needed a little help on this one...Thank you
+   <a href="https://www.uptycs.com/blog/hunting-for-evil-launch-daemons-identifying-suspicious-behavior-with-osquery">
+    Guillaume Ross!
+   </a>
+  </p>
+ </body>
+ <style>
+  html {
+  font-family: monospace;
+}
+
+body {
+  margin: 2em;
+  max-width: 750px;
+}
+
+ul {
+  list-style-type: none;
+  padding-inline-start: 19px;
+}
+
+code {
+  font-size: 120%;
+}
+pre code {
+  background-color: #eee;
+  border: 1px solid #999;
+  display: block;
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 100%;
+  overflow-x: auto;
+}
+ </style>
+</html>
