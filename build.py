@@ -64,12 +64,12 @@ def generate_index():
   
   #TODO replace with markdown.readFromFile or whatever...
   # this would allow for removing next two file open blocks
-  html = "<ol>"
+  html = "<ul>"
 
   for name in f_names:
     html += f"<li><a href='/public/blog/{name}'>{name.replace('-',' ').replace('.html', '')}</a></li>"
 
-  html += "</ol>"
+  html += "</ul>"
   
   template = template.replace("__article__", html)
   
