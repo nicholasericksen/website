@@ -17,7 +17,7 @@ While I was investigating the Go RPC client I noticed an issue...so I forked the
 but this year I really want to focus on my original "nicholasericksen" github profile which has been a bit sad these last few years.
 You can't always publish anon content..
 
-Well here is the fix: https://github.com/ipfs/kubo/pull/10267
+Well here is the fix: [](https://github.com/ipfs/kubo/pull/10267)
 
 A minor change to the documentation for a broken link, but hey you have to start on these things somewhere. 
 Every little bit helps. The maintainer thought so as well. They approved it for auto-merging and said "Thx".
