@@ -1,4 +1,4 @@
-# SDK of Pure HTTP?
+# SDK or Pure HTTP?
 
 Whenever I try and integrate with a new system and leverage there API it always seems
 I am faced with two choices; use pure HTTP requests or try there SDK for whatever specific language.
