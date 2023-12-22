@@ -26,12 +26,11 @@ They even provided a CURL command example which makes it super easy to reason ab
 Don't get me started on POSTMan. That's for another time.
 
 ## Conclusion
-So what are those silly wrappers really doing for us anyway?
+Using standards makes life a whole lot easier. That's probably why 
+we create them in the first place. So what are those silly wrappers really doing for us anyway?
 
 Here is a bit of networking debugging tools in case it helps.
 ```
 Ping. Telnet. Curl. TCPDump. Strace.
 ```
 
-Using standards makes life a whole lot easier. That's probably why 
-we create them in the first place.
